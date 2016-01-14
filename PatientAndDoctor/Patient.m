@@ -10,7 +10,7 @@
 
 @implementation Patient
 
--(instancetype)initWithName:(NSString *)name Age:(NSString *)age
+-(instancetype)initWithName:(NSString *)name age:(NSString *)age
 {
     self = [super init];
     if (self) {
@@ -19,5 +19,15 @@
     }
     return self;
 }
+
+-(void)updateHealthCard:(Patient *)patient {
+    self.name = patient.name;
+    self.age = patient.age;
+}
+
+//-(void)visitDoc:(Doctor *)doc {
+//    NSLog(@"Patient %@ is attempting to visit Doctor %@", self.name, doc.name);
+//}
+
 
 @end
